@@ -1,5 +1,5 @@
 // ----------------------
-// Optimized Two Sum – Hash Map
+// 1-) Optimized Two Sum – Hash Map
 // ----------------------
 function TwoSum(nums: number[], target: number): number[] {
     const map = new Map<number, number>();
@@ -14,7 +14,7 @@ function TwoSum(nums: number[], target: number): number[] {
 }
 
 // ----------------------
-// Best Time to Buy and Sell Stock – Brute Force
+// 2-) Best Time to Buy and Sell Stock – Brute Force
 // ----------------------
 function maxProfit(prices: number[]): number {
     let profit = 0;
@@ -32,7 +32,7 @@ function maxProfit(prices: number[]): number {
 }
 
 // ----------------------
-// Remove Element – Two Pointers
+// 3-) Remove Element – Two Pointers
 // ----------------------
 function removeElement(nums: number[], val: number): number {
     let k = 0;
@@ -46,7 +46,7 @@ function removeElement(nums: number[], val: number): number {
 }
 
 // ----------------------
-// Search Insert Position – Binary Search
+// 4-) Search Insert Position – Binary Search
 // ----------------------
 function SearchInsert(nums: number[], target: number): number {
     let low = 0;
@@ -64,7 +64,7 @@ function SearchInsert(nums: number[], target: number): number {
 }
 
 // ----------------------
-// Contains Duplicate – Hash Set
+// 5-) Contains Duplicate – Hash Set
 // ----------------------
 function ContainsDuplicate(nums: number[]): boolean {
     let seen = new Set<number>();
@@ -78,7 +78,7 @@ function ContainsDuplicate(nums: number[]): boolean {
 }
 
 // ----------------------
-// Intersection of Two Arrays II – Hash Map + Frequency Counting
+// 6-) Intersection of Two Arrays II – Hash Map + Frequency Counting
 // ----------------------
 function intersection(nums1: number[], nums2: number[]): number[] {
     const set1 = new Set<number>();
@@ -98,7 +98,7 @@ function intersection(nums1: number[], nums2: number[]): number[] {
 }
 
 // ----------------------
-// Plus One – Digit Manipulation
+// 7-) Plus One – Digit Manipulation
 // ----------------------
 function PlusOne(digits: number[]): number[] {
     for (let i = digits.length - 1; i < digits.length; i--) {
@@ -116,7 +116,7 @@ function PlusOne(digits: number[]): number[] {
 }
 
 // ----------------------
-// Maximum Product of Two Elements – Brute Force
+// 8-) Maximum Product of Two Elements – Brute Force
 // ----------------------
 function maxProduct(nums: number[]): number {
     let res = -Infinity;
@@ -132,7 +132,7 @@ function maxProduct(nums: number[]): number {
 }
 
 // ----------------------
-// Maximum Product of Two Elements – Linear Scan
+// 9-) Maximum Product of Two Elements – Linear Scan
 // ----------------------
 function MaxProduct(nums: number[]): number {
     let max1 = -Infinity, max2 = -Infinity;
@@ -148,7 +148,7 @@ function MaxProduct(nums: number[]): number {
 }
 
 // ----------------------
-// Third Maximum Number – Sorting + Deduplication
+// 10-) Third Maximum Number – Sorting + Deduplication
 // ----------------------
 function ThirdMax(nums: number[]): number {
     nums.sort((a, b) => b - a);
@@ -162,7 +162,7 @@ function ThirdMax(nums: number[]): number {
 }
 
 // ----------------------
-// Majority Element – Boyer-Moore Voting Algorithm
+// 11-) Majority Element – Boyer-Moore Voting Algorithm
 // ----------------------
 function MajorityElement(nums: number[]): number {
     let candidate = nums[0];
@@ -181,7 +181,7 @@ function MajorityElement(nums: number[]): number {
 }
 
 // ----------------------
-// Maximum Average Subarray – Sliding Window
+// 12-) Maximum Average Subarray – Sliding Window
 // ----------------------
 function FindMaxAverage(nums: number[], k: number): number {
     let windowSum = 0;
@@ -197,7 +197,7 @@ function FindMaxAverage(nums: number[], k: number): number {
 }
 
 // ----------------------
-// Maximum Average Subarray – Brute Force
+// 13-) Maximum Average Subarray – Brute Force
 // ----------------------
 function findMaxAverage(nums: number[], k: number): number {
     let highestAverage = -Infinity;
@@ -215,7 +215,7 @@ function findMaxAverage(nums: number[], k: number): number {
 }
 
 // ----------------------
-// Remove Duplicates from Sorted Array – Two Pointers
+// 14-) Remove Duplicates from Sorted Array – Two Pointers
 // ----------------------
 function removeDuplicates(nums: number[]): number {
     if (nums.length === 0) return 0;
@@ -230,7 +230,7 @@ function removeDuplicates(nums: number[]): number {
 }
 
 // ----------------------
-// Merge Sorted Array – Three Pointers
+// 15-) Merge Sorted Array – Three Pointers
 // ----------------------
 function Merge(nums1: number[], m: number, nums2: number[], n: number): void {
     let i = m - 1, j = n - 1, k = m + n - 1;
@@ -247,7 +247,7 @@ function Merge(nums1: number[], m: number, nums2: number[], n: number): void {
 }
 
 // ----------------------
-// Move Zeroes – In-place Two Pointers
+// 16-) Move Zeroes – In-place Two Pointers
 // ----------------------
 function MoveZeroes(nums: number[]): void {
     let nonZeroIndex = 0;
@@ -265,8 +265,38 @@ function MoveZeroes(nums: number[]): void {
 
 // ******************************************* Strings *******************************************
 
+// 1- Reverse String – Use two pointers (left/right), meet at middle, swap elements using array destructuring, modify array in-place
+// expl: Input: s = ["h","e","l","l","o"] Output: ["o","l","l","e","h"]
+
+// 2- Valid Palindrome – Two pointers from ends, skip non-alphanumeric with regex test, compare lowercased chars, move to middle
+// expl: Input: s = "A man, a plan, a canal: Panama" Output: true
+
+// 3- Find the Index of First Occurrence – Loop through string, use substring to check if window of needle's length matches needle exactly
+// expl: Input: haystack = "sadbutsad", needle = "sad" Output: 0
+
+// 4- Longest Common Prefix – Take first string as prefix, for each other string 1 by 1 reduce prefix length until it matches start of string
+// expl: Input: strs = ["flower","flow","flight"] Output: "fl"
+
+// 5- Valid Anagram – Create frequency map of first string's chars, decrease counts for second string's chars, fail if any char missing
+// expl: Input: s = "anagram", t = "nagaram" Output: true
+
+// 6- First Unique Character – Build frequency map of all chars, then find first char with count of 1
+// expl: Input: s = "leetcode" Output: 0 (first non-repeating char 'l' is at index 0)
+
+// 7- Reverse Words in String III – Split by space, for each word split to array, reverse, join back, join all with spaces
+// expl: Input: s = "Let's take LeetCode contest" Output: "s'teL ekat edoCteeL tsetnoc"
+
+// 8- Count and Say – Recursive: get previous result, count consecutive same digits, build string of "count + digit"
+// expl: Input: n = 4 Output: "1211" (1 is read as "one 1" = "11", 11 is read as "two 1s" = "21", 21 is read as "one 2 one 1" = "1211")
+
+// 9- Add Binary – Right-to-left addition, track carry, build result string from right using modulo and division
+// expl: Input: a = "11", b = "1" Output: "100"
+
+// 10- Length of Last Word – Skip trailing spaces from end, count chars until space or start, handle single word edge case
+// expl: Input: s = "Hello World  " Output: 5 (length of "World")
+
 // ----------------------
-// Reverse String – Two Pointers
+// 1-) Reverse String – Two Pointers
 // ----------------------
 function ReverseString(s: string[]): void {
     let left = 0, right = s.length - 1;
@@ -278,7 +308,7 @@ function ReverseString(s: string[]): void {
 }
 
 // ----------------------
-// Valid Palindrome – Two Pointers
+// 2-) Valid Palindrome – Two Pointers
 // ----------------------
 function IsPalindrome(s: string): boolean {
     let left = 0, right = s.length - 1;
@@ -293,7 +323,7 @@ function IsPalindrome(s: string): boolean {
 }
 
 // ----------------------
-// Implement strStr() – Naive Substring Search
+// 3-) Find the Index of the First Occurrence in a String – Naive Substring Search
 // ----------------------
 function StrStr(haystack: string, needle: string): number {
     if (needle.length === 0) return 0;
@@ -304,7 +334,7 @@ function StrStr(haystack: string, needle: string): number {
 }
 
 // ----------------------
-// Longest Common Prefix – Horizontal Scanning
+// 4-) Longest Common Prefix – Horizontal Scanning
 // ----------------------
 function LongestCommonPrefix(strs: string[]): string {
     if (strs.length === 0) return "";
@@ -319,7 +349,7 @@ function LongestCommonPrefix(strs: string[]): string {
 }
 
 // ----------------------
-// Valid Anagram – Frequency Counting
+// 5-) Valid Anagram – Frequency Counting
 // ----------------------
 function IsAnagram(s: string, t: string): boolean {
     if (s.length !== t.length) return false;
@@ -335,7 +365,7 @@ function IsAnagram(s: string, t: string): boolean {
 }
 
 // ----------------------
-// First Unique Character in a String – Hash Map
+// 6-) First Unique Character in a String – Hash Map
 // ----------------------
 function FirstUniqChar(s: string): number {
     const count: Record<string, number> = {};
@@ -349,7 +379,7 @@ function FirstUniqChar(s: string): number {
 }
 
 // ----------------------
-// Reverse Words in a String III – Split + Reverse
+// 7-) Reverse Words in a String III – Split + Reverse
 // ----------------------
 function ReverseWords(s: string): string {
     return s.split(" ")
@@ -358,7 +388,7 @@ function ReverseWords(s: string): string {
 }
 
 // ----------------------
-// Count and Say – Recursive String Construction
+// 8-) Count and Say – Recursive String Construction
 // ----------------------
 function CountAndSay(n: number): string {
     if (n === 1) return "1";
@@ -377,7 +407,7 @@ function CountAndSay(n: number): string {
 }
 
 // ----------------------
-// Add Binary – Digit by Digit Addition
+// 9-) Add Binary – Digit by Digit Addition
 // ----------------------
 function AddBinary(a: string, b: string): string {
     let i = a.length - 1, j = b.length - 1, carry = 0;
@@ -393,7 +423,7 @@ function AddBinary(a: string, b: string): string {
 }
 
 // ----------------------
-// Length of Last Word – Reverse Scan
+// 10-) Length of Last Word – Reverse Scan
 // ----------------------
 function LengthOfLastWord(s: string): number {
     let length = 0;
