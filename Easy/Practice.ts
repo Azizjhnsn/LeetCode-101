@@ -1,3 +1,54 @@
+// ******************************************* Arrays *******************************************
+
+// 1- Two Sum – Use a hash map to store seen numbers, check if (target - current) exists
+// expl: Input: nums = [2,7,11,15], target = 9 Output: [0,1]
+
+// 2- Best Time to Buy and Sell Stock – Track min price, maximize profit by difference
+// expl: Input: prices = [7,1,5,3,6,4] Output: 5 (buy=1, sell=6)
+
+// 3- Remove Element – Overwrite array in-place with two pointers (slow/fast), return new length
+// expl: Input: nums = [3,2,2,3], val = 3 Output: 2 (nums becomes [2,2,...])
+
+// 4- Search Insert Position – Binary search to find exact or insert index
+// expl: Input: nums = [1,3,5,6], target = 5 Output: 2
+
+// 5- Contains Duplicate – Store seen numbers in a set, return true if duplicate found
+// expl: Input: nums = [1,2,3,1] Output: true
+
+// 6- Intersection of Two Arrays II – Count frequencies of nums1 in a hash map, match against nums2
+// expl: Input: nums1 = [1,2,2,1], nums2 = [2,2] Output: [2,2]
+
+// 7- Plus One – Handle carry from rightmost digit, propagate until no 9’s remain
+// expl: Input: digits = [9,9,9] Output: [1,0,0,0]
+
+// 8- Maximum Product of Two Elements – Compare every pair (brute force)
+// expl: Input: nums = [3,4,5,2] Output: 12 (from (5-1)*(4-1))
+
+// 9- Maximum Product of Two Elements – Linear scan for top two max values
+// expl: Input: nums = [1,5,4,5] Output: 16
+
+// 10- Third Maximum Number – Sort descending, remove duplicates, return 3rd or max
+// expl: Input: nums = [2,2,3,1] Output: 1
+
+// 11- Majority Element – Boyer-Moore voting, find element appearing > n/2 times
+// expl: Input: nums = [3,2,3] Output: 3
+
+// 12- Maximum Average Subarray I – Sliding window of size k, track max sum
+// expl: Input: nums = [1,12,-5,-6,50,3], k = 4 Output: 12.75
+
+// 13- Maximum Average Subarray I – Brute force, compute all k-length subarray averages
+// expl: Input: nums = [5], k = 1 Output: 5
+
+// 14- Remove Duplicates from Sorted Array – Two pointers, overwrite duplicates, return unique length
+// expl: Input: nums = [1,1,2] Output: 2 (nums becomes [1,2,...])
+
+// 15- Merge Sorted Array – Three pointers from the back, place largest at end
+// expl: Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3 Output: [1,2,2,3,5,6]
+
+// 16- Move Zeroes – Two pointers, shift non-zero forward, fill remainder with zeroes
+// expl: Input: nums = [0,1,0,3,12] Output: [1,3,12,0,0]
+
+
 // ----------------------
 // 1-) Optimized Two Sum – Hash Map
 // ----------------------
